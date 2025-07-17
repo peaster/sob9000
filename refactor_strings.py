@@ -183,7 +183,7 @@ def main():
     )
     parser.add_argument("--model", default="gpt-4", help="Model name to use")
     parser.add_argument(
-        "--api-key", env_var="API_KEY", help="Bearer token for LLM API"
+        "--api-key", default=os.getenv("API_KEY"), help="Bearer token for LLM API"
     )
     parser.add_argument(
         "--exclude",
