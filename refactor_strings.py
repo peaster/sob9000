@@ -130,7 +130,7 @@ def refactor_file(
             "You are a Java refactoring assistant. "
             "Extract every string literal into a `public static final String` constant "
             "declared at the top (after package+imports), "
-            "and replace usages accordingly. "
+            "and replace usages accordingly. If a constant is defined using a different access modifier, leave it alone."
             "Return ONLY the full, compilable refactored source code."
         ),
     }
