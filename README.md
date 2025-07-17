@@ -87,7 +87,7 @@ python refactor_strings.py \
     --backup
 ```
 
-### Using an OpenAI-compatible API (e.g., vLLM)
+### Using an OpenAI-compatible API (e.g., vLLM, OpenRouter, Groq, etc.)
 
 ```
 python refactor_strings.py \
@@ -96,6 +96,7 @@ python refactor_strings.py \
     --model devstral \
     --workers 2
 ```
+If you are using vLLM, during server startup look for log output reading `Maximum concurrency for 32,768 tokens per request: 3.26x` or similar. That concurrency multiplier is how many workers you can assign rounded down to the nearest integer.
 
 ### Using a local Ollama server
 
@@ -124,10 +125,10 @@ Exit-code is 0 on success; any LLM failure or parsing error is logged.
 ## Requirements
 
 - Python ≥ 3.8  
-- `requests`, `tqdm` (install with `pip install -r requirements.txt`)
+- `requests`, `urllib3`, `tqdm` (make it easy on yourself and install with `pip install -r requirements.txt`)
 
 ---
 
 ## License
 
-MIT
+MIT, have fun
