@@ -1,0 +1,4 @@
+# Core runtime – latest stable as of June 2025
+requests>=2.32.3
+urllib3>=2.2.2
+tqdm>=4.67.1
