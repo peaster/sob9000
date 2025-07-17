@@ -131,7 +131,7 @@ def refactor_file(
             "Extract every string literal into a `public static final String` constant "
             "declared at the top (after package+imports), "
             "and replace usages accordingly. If a constant is defined using a different access modifier, leave it alone."
-            "Return ONLY the full, compilable refactored source code."
+            "Return ONLY the full, compilable refactored source code. Do not surround the code in triple backticks."
         ),
     }
     user_msg = {"role": "user", "content": src}
