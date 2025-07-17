@@ -139,7 +139,7 @@ def refactor_file(
         "model": model,
         "messages": [system_msg, user_msg],
         "temperature": 0.0,
-        "max_tokens": 4096,  # user may adjust
+        "max_tokens": 32768,
     }
 
     headers = {}
